@@ -5,11 +5,11 @@
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/v2019-11-15T2348Z/bitrock-unpacker-x86_64.exe",
+            "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/v2019-11-15T2348Z/bitrock-unpacker-x86_64.exe#/bitrock-unpacker.exe",
             "hash": "e90c312f83dae6cb616a88e8e9910a4474b61324da7373d7672e1472263a4052"
         },
         "32bit": {
-            "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/v2019-11-15T2348Z/bitrock-unpacker-x86.exe",
+            "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/v2019-11-15T2348Z/bitrock-unpacker-x86.exe#/bitrock-unpacker.exe",
             "hash": "c5bae81848f126ac1f2cb2b054e5639c3584fb167cdc343974202af366510d0a"
         }
     },
