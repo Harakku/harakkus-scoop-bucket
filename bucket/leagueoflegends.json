@@ -1,9 +1,4 @@
 {
-    "##": [
-        "BitRock installer. Requires admin privileges. Some of the unwanted behavior fixed in the post_install",
-        "Probably wanted behavior: adds a firewall rule.",
-        "Unwanted behavior: creates desktop and start menu shortcuts, adds a registry key for 'Programs and Features' uninstallation."
-    ],
     "version": "nightly",
     "homepage": "http://leagueoflegends.com/",
     "description": "MOBA game published by Riot Games.",
@@ -19,16 +14,14 @@
         ["LeagueClient.exe", "League of Legends"]
     ],
     "installer": {
-        "script": "Invoke-ExternalCommand -FilePath \"$dir\\installer_euw.exe\" -ArgumentList \"--mode unattended --installdir `\"$dir`\" --license_agreement 1\" -RunAs"
+        "##": "Uses a BitRock installer",
+        "script": "Start-Process -FilePath \"$dir\\installer_euw.exe\" -ArgumentList \"--mode unattended --installdir `\"$dir`\" --license_agreement 1\" -Verb RunAs -Wait"
     },
     "post_install": [
-        "Remove-Item \"$Env:PUBLIC\\Desktop\\League of Legends.lnk\"",
-        "$d = \"$Env:ALLUSERSPROFILE\\Microsoft\\Windows\\Start Menu\\Programs\\League of Legends\"",
-        "Remove-Item \"$d\\League of Legends.lnk\"",
-        "Remove-Item \"$d\\Uninstall League of Legends.lnk\"",
-        "if ((Get-ChildItem $d -Recurse -File | Measure-Object).Count -eq 0) { Remove-Item $d }"
+        "if (Test-Path ($f = \"$Env:PUBLIC\\Desktop\\League of Legends.lnk\")) {Remove-Item $f}",
+        "if (Test-Path ($d = \"$Env:ALLUSERSPROFILE\\Microsoft\\Windows\\Start Menu\\Programs\\League of Legends\")) {Remove-Item $d -Recurse}"
     ],
     "uninstaller": {
-        "script": "Invoke-ExternalCommand -FilePath \"$dir\\Uninstall League of Legends.exe\" -ArgumentList \"--mode unattended\" -RunAs"
+        "script": "Start-Process -FilePath \"$dir\\Uninstall League of Legends.exe\" -ArgumentList \"--mode unattended\" -Verb RunAs -Wait"
     }
 }
