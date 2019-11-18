@@ -19,7 +19,7 @@
     },
     "post_install": [
         "if (Test-Path ($f = \"$Env:PUBLIC\\Desktop\\League of Legends.lnk\")) {Remove-Item $f}",
-        "if (Test-Path ($d = \"$Env:ALLUSERSPROFILE\\Microsoft\\Windows\\Start Menu\\Programs\\League of Legends\")) {Remove-Item $d -Recurse}"
+        "if (Test-Path ($d = \"$Env:PROGRAMDATA\\Microsoft\\Windows\\Start Menu\\Programs\\League of Legends\")) {Remove-Item $d -Recurse}"
     ],
     "uninstaller": {
         "script": "Start-Process -FilePath \"$dir\\Uninstall League of Legends.exe\" -ArgumentList \"--mode unattended\" -Verb RunAs -Wait"
