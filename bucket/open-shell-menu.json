@@ -14,12 +14,9 @@
     "installer": {
         "keep": "true",
         "script": [
-            "start-process \"$dir\\installer.exe\" -argumentlist \"/i %MSI% /qn ADDLOCAL=StartMenu APPLICATIONFOLDER=$dir\" -Verb RunAs -Wait"
+            "start-process \"$dir\\installer.exe\" -argumentlist \"/i %MSI% /qn ADDLOCAL=StartMenu APPLICATIONFOLDER=$dir START_MENU_FOLDER=0\" -Verb RunAs -Wait"
         ]
     },
-    "post_install": [
-        "if (Test-Path ($d = \"$Env:PROGRAMDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Open-Shell\")) {Remove-Item $d -Recurse}"
-    ],
     "uninstaller": {
         "script": [
             "start-process $dir\\StartMenu.exe -argumentlist \"-exit\" -wait",
