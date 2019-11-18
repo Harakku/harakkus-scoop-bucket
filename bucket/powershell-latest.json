@@ -14,7 +14,10 @@
         }
     },
     "installer": {
-        "script": "mv $dir\\PowerShell\\*\\* $dir"
+        "script": [
+            "mv $dir\\PowerShell\\*\\* $dir",
+            "rm $dir\\PowerShell -recurse"
+        ]
     },
     "##": "The installer also has an option to add 'Open here' context menus but those are handled by the installer itself so that isnt available.",
     "notes": [
