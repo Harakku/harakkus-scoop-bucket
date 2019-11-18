@@ -1,16 +1,16 @@
 {
-    "version": "v2019-11-15T2348Z",
+    "version": "v2019-11-18T1610Z",
     "description": "BitRock installer extractor script.",
     "homepage": "https://github.com/Harakku/bitrock-unpacker",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/v2019-11-15T2348Z/bitrock-unpacker-x86_64.exe#/bitrock-unpacker.exe",
-            "hash": "e90c312f83dae6cb616a88e8e9910a4474b61324da7373d7672e1472263a4052"
+            "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/v2019-11-18T1610Z/bitrock-unpacker-v2019-11-18T1610Z-x86_64.exe",
+            "hash": "841ce3f6fff9a75dd56ca542575ee6d8975ca76c83340bdaceb22ef6a9731c03"
         },
         "32bit": {
-            "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/v2019-11-15T2348Z/bitrock-unpacker-x86.exe#/bitrock-unpacker.exe",
-            "hash": "c5bae81848f126ac1f2cb2b054e5639c3584fb167cdc343974202af366510d0a"
+            "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/v2019-11-18T1610Z/bitrock-unpacker-v2019-11-18T1610Z-x86.exe",
+            "hash": "09160158ce3b4541c5cbd2d1414a2647cdf14a1f1e2b6e83c2c1c57a15f5caf7"
         }
     },
     "bin": "bitrock-unpacker.exe",
@@ -21,10 +21,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/$version/bitrock-unpacker-x86_64.exe"
+                "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/$version/bitrock-unpacker-$version-x86_64.exe"
             },
             "32bit": {
-                "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/$version/bitrock-unpacker-x86.exe"
+                "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/$version/bitrock-unpacker-$version-x86.exe"
             }
         }
     }
