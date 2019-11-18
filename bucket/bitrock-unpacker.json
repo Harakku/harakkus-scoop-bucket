@@ -16,7 +16,7 @@
     "bin": "bitrock-unpacker.exe",
     "checkver": {
         "github": "https://github.com/Harakku/bitrock-unpacker",
-        "regex": "(v\\d+-\\d+-\\d+T\\d+Z)"
+        "regex": "\/releases\/tag\/(v\\d+-\\d+-\\d+T\\d+Z)"
     },
     "autoupdate": {
         "architecture": {
