@@ -15,12 +15,14 @@
     ],
     "installer": {
         "##": "Uses a BitRock installer",
-        "script": "Start-Process -FilePath \"$dir\\installer_euw.exe\" -ArgumentList \"--mode unattended --installdir `\"$dir`\" --license_agreement 1\" -Verb RunAs -Wait"
+        "script": [
+            "if (Test-Path ($desktopLink = \"$Env:PUBLIC\\Desktop\\League of Legends.lnk\")) {$desktopLink = ''}",
+            "if (Test-Path ($startMenuDir = \"$Env:PROGRAMDATA\\Microsoft\\Windows\\Start Menu\\Programs\\League of Legends\")) {$startMenuDir = ''}",
+            "Start-Process \"$dir\\installer_euw.exe\" -ArgumentList \"--mode unattended --installdir `\"$dir`\" --license_agreement 1\" -Verb RunAs -Wait",
+            "if ($desktopLink) {Remove-Item $desktopLink}",
+            "if ($startMenuDir) {Remove-Item $startMenuDir -Recurse}"
+        ]
     },
-    "post_install": [
-        "if (Test-Path ($f = \"$Env:PUBLIC\\Desktop\\League of Legends.lnk\")) {Remove-Item $f}",
-        "if (Test-Path ($d = \"$Env:PROGRAMDATA\\Microsoft\\Windows\\Start Menu\\Programs\\League of Legends\")) {Remove-Item $d -Recurse}"
-    ],
     "uninstaller": {
         "script": "Start-Process -FilePath \"$dir\\Uninstall League of Legends.exe\" -ArgumentList \"--mode unattended\" -Verb RunAs -Wait"
     }
