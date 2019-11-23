@@ -2,15 +2,15 @@
     "homepage": "https://github.com/PowerShell/PowerShell",
     "description": "PowerShell, open-source and cross-platform shell. [Latest (pre-release) version.]",
     "license": "MIT",
-    "version": "7.0.0-preview.5",
+    "version": "7.0.0-preview.6",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-preview.5/PowerShell-7.0.0-preview.5-win-x64.msi#/installer.msi",
-            "hash": "34DD3817C96EBAE7A29E16E36322A07C7EC170E943B3AFB141D9C1B4073EE9C6"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-preview.6/PowerShell-7.0.0-preview.6-win-x64.msi",
+            "hash": "67ea17e4fc55589c5ff34fc869dd18b9bc842cb886379100ef16f4795f35198e"
         },
         "32bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-preview.5/PowerShell-7.0.0-preview.5-win-x86.msi#/installer.msi",
-            "hash": "15859B51FF8C80A56F09DDD5B77599037C9091A602EFE83075F200E78074A71D"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-preview.6/PowerShell-7.0.0-preview.6-win-x86.msi",
+            "hash": "a96119b6db4c65758501e09ccdfa44b2cb8354456f754c53440021b7a0c68743"
         }
     },
     "installer": {
@@ -25,13 +25,16 @@
         "Enable PowerShell remoting: $dir\\Install-PowerShellRemoting.ps1"
     ],
     "shortcuts": [
-        ["pwsh.exe", "PowerShell", "-WorkingDirectory ~"]
+        [
+            "pwsh.exe",
+            "PowerShell",
+            "-WorkingDirectory ~"
+        ]
     ],
-    "bin": [
-        "preview\\pwsh-preview.cmd"
-    ],
+    "bin": "preview\\pwsh-preview.cmd",
     "checkver": {
-        "regex": "\/releases\/tag\/(?:v|V)?([\\d.a-z\\-]+)"
+        "url": "https://github.com/PowerShell/PowerShell/tags",
+        "regex": "/releases/tag/(?:v|V)?([\\d.\\w\\-]+)"
     },
     "autoupdate": {
         "architecture": {
