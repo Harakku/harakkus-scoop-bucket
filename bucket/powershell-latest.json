@@ -31,7 +31,7 @@
             "-WorkingDirectory ~"
         ]
     ],
-    "bin": "preview\\pwsh-preview.cmd",
+    "bin": "pwsh.exe",
     "checkver": {
         "url": "https://github.com/PowerShell/PowerShell/tags",
         "regex": "/releases/tag/(?:v|V)?([\\d.\\w\\-]+)"
