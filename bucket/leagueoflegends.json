@@ -8,10 +8,10 @@
     },
     "url": "https://riotgamespatcher-a.akamaihd.net/releases/live/installer/deploy/League%20of%20Legends%20installer%20EUW.exe#/installer_euw.exe",
     "persist": [
-        "Config"
+        "Riot Games\\League of Legends\\Config"
     ],
     "shortcuts": [
-        ["LeagueClient.exe", "League of Legends"]
+        ["Riot Games\\League of Legends\\LeagueClient.exe", "League of Legends"]
     ],
     "installer": {
         "##": "Uses a BitRock installer",
