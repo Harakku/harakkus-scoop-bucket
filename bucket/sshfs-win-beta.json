@@ -15,6 +15,10 @@
         }
     },
     "depends": "winfsp",
+    "bin": [
+        "bin\\sshfs.exe",
+        "bin\\sshfs-win.exe"
+    ],
     "installer": {
         "script": "Invoke-ExternalCommand msiexec -ArgumentList \"/i $dir\\setup.msi_ INSTALLDIR=$dir ARPSYSTEMCOMPONENT=0 /qn\" -RunAs"
     },
