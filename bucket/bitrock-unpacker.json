@@ -16,15 +16,15 @@
     "bin": "bitrock-unpacker.exe",
     "checkver": {
         "github": "https://github.com/Harakku/bitrock-unpacker",
-        "regex": "\/releases\/tag\/(v\\d+-\\d+-\\d+T\\d+Z)"
+        "regex": "\/releases\/tag\/v([\\d-]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/$version/bitrock-unpacker-$version-x86_64.exe#/bitrock-unpacker.exe"
+                "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/v$version/bitrock-unpacker-v$version-x86_64.exe#/bitrock-unpacker.exe"
             },
             "32bit": {
-                "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/$version/bitrock-unpacker-$version-x86.exe#/bitrock-unpacker.exe"
+                "url": "https://github.com/Harakku/bitrock-unpacker/releases/download/v$version/bitrock-unpacker-v$version-x86.exe#/bitrock-unpacker.exe"
             }
         }
     }
