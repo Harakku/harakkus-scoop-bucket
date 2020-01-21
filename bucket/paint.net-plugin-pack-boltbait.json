@@ -10,7 +10,7 @@
         "Get-ChildItem (\"$dir\\*.dll\", \"$dir\\*.xaml\", \"$dir\\*.txt\") | Rename-Item -NewName { 'BoltBait_' + $_.Name }",
         "mv \"$dir\\*.dll\" \"$scoopdir\\apps\\paint.net\\current\\Effects\"",
         "mv \"$dir\\*.xaml\" \"$scoopdir\\apps\\paint.net\\current\\Shapes\"",
-        "md -Force \"$scoopdir\\apps\\paint.net\\current\\UserFiles\\Palettes\"",
+        "md -Force \"$scoopdir\\apps\\paint.net\\current\\UserFiles\\Palettes\" | out-null",
         "mv \"$dir\\*.txt\" \"$scoopdir\\apps\\paint.net\\current\\UserFiles\\Palettes\""
     ],
     "uninstaller": {
