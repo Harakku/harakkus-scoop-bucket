@@ -2,15 +2,15 @@
     "homepage": "https://github.com/PowerShell/PowerShell",
     "description": "PowerShell, open-source and cross-platform shell. [Latest (pre-release) version.]",
     "license": "MIT",
-    "version": "7.0.0-rc.2",
+    "version": "6.2.4",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-rc.2/PowerShell-7.0.0-rc.2-win-x64.msi",
-            "hash": "a903b63f27882b726e81e7a6ee3e52ce3979036a372ddf4f4d62df8ce5523345"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v6.2.4/PowerShell-6.2.4-win-x64.msi",
+            "hash": "ae0601c854b8d1953ccebca6df7efecf37b4b81844fc345093a3160c3c6417ca"
         },
         "32bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-rc.2/PowerShell-7.0.0-rc.2-win-x86.msi",
-            "hash": "ca90f07dd63b369bcd8b7ac20402af58fe812e782021b95396996ee280b9dad9"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v6.2.4/PowerShell-6.2.4-win-x86.msi",
+            "hash": "24903fa0b46c34959b2bfde1ddf6b1bebdedc0c1f8ed25b65f88c6d20103123a"
         }
     },
     "installer": {
