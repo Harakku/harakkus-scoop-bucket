@@ -12,6 +12,7 @@
             "MusicBrainz Picard"
         ]
     ],
+    "persist": "MusicBrainz-Picard",
     "checkver": {
         "url": "https://github.com/metabrainz/picard/releases",
         "re": "download/(?<tag>[\\d\\w.-]+)/MusicBrainz-Picard-([\\d\\w.]+)\\.exe"
