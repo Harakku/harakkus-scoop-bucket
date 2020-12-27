@@ -2,9 +2,9 @@
     "homepage": "https://picard.musicbrainz.org/",
     "description": "A cross-platform music tagger written in Python.",
     "license": "GPL-2.0-or-later",
-    "hash": "70e05ca91d7a65153b8641c89b045068fc7d41c41062a9715523a2be5193fd32",
-    "url": "https://github.com/metabrainz/picard/releases/download/release-2.5.2/MusicBrainz-Picard-2.5.2.exe#/picard.exe",
-    "version": "2.5.2",
+    "hash": "594955b35d31c46a9490f42c61a1b25ec1a6c8860e06c4677df8cec322396b4e",
+    "url": "https://github.com/metabrainz/picard/releases/download/release-2.5.5/MusicBrainz-Picard-2.5.5.exe#/picard.exe",
+    "version": "2.5.5",
     "bin": "picard.exe",
     "shortcuts": [
         [
